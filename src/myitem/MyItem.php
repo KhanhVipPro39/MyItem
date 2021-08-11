@@ -18,7 +18,7 @@ use pocketmine\item\enchantment\Enchantment;
 use pocketmine\item\Item;
 class MyItem extends PB implements Listener{
 
-	public static $enchants;
+	public $enchant;
 
 	public function onEnable(){
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
