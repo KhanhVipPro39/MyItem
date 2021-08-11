@@ -29,6 +29,10 @@ class MyItem extends PB implements Listener{
 	}
 	public function onCommand(CommandSender $s, Command $cmd, String $label, Array $args): bool{
 		if($cmd->getName() == "setname"){
+			if(!$s->hasPermission("setname.command")){
+				$s->sendMessage("§cYou do not have permission to use this command!");
+				return true;
+			}
 			$name = $s->getName();
 		   $text = implode(" ", $args);
 		   $item = $s->getInventory()->getItemInHand();
@@ -37,6 +41,10 @@ class MyItem extends PB implements Listener{
 		   $s->sendMessage("§6[§aMyItem§6]: §7Change custom name succeed");
 		}
 		if($cmd->getName() == "setlore"){
+			if(!$s->hasPermission("setlore.command")){
+				$s->sendMessage("§cYou do not have permission to use this command!");
+				return true;
+			}
 		   $name = $s->getName();
 		   $item = $s->getInventory()->getItemInHand();
 		   $lore = implode(" ", $args);
@@ -46,6 +54,10 @@ class MyItem extends PB implements Listener{
 		   $s->sendMessage("§6[§aMyItem§6]: §7Change lore succeed");
 		}
 		if($cmd->getName() == "addench"){
+			if(!$s->hasPermission("addench.command")){
+				$s->sendMessage("§cYou do not have permission to use this command!");
+				return true;
+			}
 	if(isset($args[0]) && isset($args[1])) {				  
 				if(is_numeric($args[0])) {					  
 					if(is_numeric($args[1])) {						  
@@ -102,6 +114,10 @@ class MyItem extends PB implements Listener{
 		}
 
 		if($cmd->getName() == "listench"){
+			if(!$s->hasPermission("listench.command")){
+				$s->sendMessage("§cYou do not have permission to use this command!");
+				return true;
+			}
  if(isset($args[0])) {
 
 			 			  $pages = array_chunk($this->enchant, 5);
