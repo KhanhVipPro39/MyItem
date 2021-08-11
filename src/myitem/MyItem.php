@@ -16,6 +16,8 @@ use pocketmine\item\enchantment\EnchantmentInstance;
 use pocketmine\item\enchantment\Enchantment;
 
 use pocketmine\item\Item;
+use pocketmine\command\PluginCommand;
+use pocketmine\inventory\Inventory;
 class MyItem extends PB implements Listener{
 
 	public $enchant;
