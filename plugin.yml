@@ -1,0 +1,15 @@
+name: MyItem
+version: 1.0.0
+api: 3.0.0
+main: myitem\MyItem
+author: YTBJero
+
+commands:
+  setname:
+    description: "SetCustomName For Item"
+  setlore:
+    description: "SetLore For Item"
+  addench:
+    description: "AddEnchant For Item"
+  listench:
+    description: "ID Enchant list"
