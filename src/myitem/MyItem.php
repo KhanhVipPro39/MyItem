@@ -28,6 +28,10 @@ class MyItem extends PB implements Listener{
 "24:Lure"];
 	}
 	public function onCommand(CommandSender $s, Command $cmd, String $label, Array $args): bool{
+		 if(!($sender instanceof Player) && !(isset($args[0]) && $args[0] === "reload")){
+            $sender->sendMessage("Please execute this command in-game");
+            return true;
+        }
 		if($cmd->getName() == "setname"){
 			$name = $s->getName();
 		   $text = implode(" ", $args);
